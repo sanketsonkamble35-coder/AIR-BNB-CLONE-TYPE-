@@ -1,0 +1,81 @@
+<% layout('layouts/boilerplate') %>
+<body>
+
+    <div class="ROW">  <br><br>
+        <div class="col-8 offset-2">
+                <h1 style="color: rgb(107, 93, 76); text-decoration:underline ;
+                text-transform: uppercase; font-family:Georgia, 
+                'Times New Roman', Times, serif;">WonderLust - Add a new list</h1>
+              <br>
+    <form action="/listings" method="POST">
+
+        <div class="label">
+            <label for="title" class="form-label"><b>TITLE</b></label>
+                 <input type="text" 
+                 name="listing[title]" 
+                 placeholder="Add a title" 
+                 class="form-control">
+            </label>
+        </div>
+        <br>
+
+       <div class="label">
+            <label for="description" class="form-label"><b>DESCRIPTION</b></label>
+                <textarea name="listing[description]" 
+                   
+                    class="form-control"></textarea>
+                </textarea>
+       </div>
+<br>
+
+        <div class="label">
+            <label for="image" class="form-label"><b>IMAGE LINK</b></label>
+            <input type="text" 
+             class="form-control"
+             name="listing[image][url]" 
+             placeholder="Enter image link">
+        </div>
+<br>
+        <div class="row ">
+            <div class="label col-md-4">
+            <label for="price" class="form-label"><b>PRICE</b></label>
+            <input type="text" class="form-control"
+                name="listing[price]"
+                placeholder="12000">
+        </div>
+<br>
+            <div class="label col-md-8">
+            <label for="country" class="form-label"><b>COUNTRY</b></label>
+            <input type="text" 
+            class="form-control"
+             name="listing[country]"
+             placeholder="India">
+        </div>
+
+        </div>
+
+
+
+<br>
+
+        <div class="label">
+            <label for="location" class="form-label"><b>LOCATION</b></label>
+            <input type="text" class="form-control" 
+            name="listing[location]"
+             placeholder="Mumbai">
+        </div>
+
+
+<br>
+
+<hr>
+        <button type="submit" class="btn btn-dark" style="background-color:  #fe424d;">Add Listing</button>
+    </form>
+    <br>
+
+    
+</body>
+    
+    
+</div>
+</div>

@@ -1,0 +1,78 @@
+<% layout('layouts/boilerplate') %>
+<body>
+
+
+
+        <div class="ROW">  <br><br>
+        <div class="col-8 offset-2">
+
+
+    <h1 style="color: rgb(107, 93, 76); text-decoration:underline ;
+                text-transform: uppercase; 
+                font-family: Georgia, 'Times New Roman', Times, serif;">WonderLust - Edit List</h1>
+
+    <form action="/listings/<%= listing._id %>?_method=PUT" method="POST">
+
+        <div class="label">
+            <label for="title" class="form-label"><b>Title</b></label>
+            <input type="text" class="form-control"
+            name="listing[title]"  
+            value="<%= listing.title %>"> <br> 
+        </div>
+
+
+        <div class="label">
+            <label for="description" class="form-label"><b>Discription</b></label>
+            <textarea name="listing[description]" class="form-control"><%= listing.description %>
+            </textarea><br>
+        </div>
+
+
+        <div class="label">
+            <label for="image" class="form-label"><b>Enter Image Url/Link</b></label>
+            <input type="text" class="form-control"
+             name="listing[image][url]"  
+            value="<%= listing.image.url %>"><br>
+        </div>
+
+
+
+
+        <div class="row">
+            
+        <div class="label col-md-4">
+            <label for="price" class="form-label"><b>Price</b></label>
+            <input type="text" name="listing[price]" 
+            class="form-control"
+            value="<%= listing.price %>"><br>
+        </div>
+
+        <div class="label col-md-8">
+            <label for="country" class="form-label"><b>Country</b></label>
+            <input type="text" name="listing[country]" 
+            class="form-control"
+            value="<%= listing.country %>"><br>
+        </div>
+
+        </div>
+
+
+
+
+
+        <div class="label">
+            <label for="location" class="form-label"><b>Location</b></label>
+            <input type="text" name="listing[location]"
+            class="form-control"
+             value="<%= listing.location %>"><br>
+        </div>
+
+
+
+ <hr>
+        <button type="submit" class="btn btn-dark" style="background-color:  #fe424d;">edit</button>
+        <br>
+    </form>
+</body>
+</div>
+</div>
