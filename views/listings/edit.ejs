@@ -1,11 +1,7 @@
 <% layout('layouts/boilerplate') %>
 <body>
-
-
-
         <div class="ROW">  <br><br>
         <div class="col-8 offset-2">
-
 
     <h1 style="color: rgb(107, 93, 76); text-decoration:underline ;
                 text-transform: uppercase; 
@@ -20,13 +16,11 @@
             value="<%= listing.title %>"> <br> 
         </div>
 
-
         <div class="label">
-            <label for="description" class="form-label"><b>Discription</b></label>
+            <label for="description" class="form-label"><b>Description</b></label>
             <textarea name="listing[description]" class="form-control"><%= listing.description %>
             </textarea><br>
         </div>
-
 
         <div class="label">
             <label for="image" class="form-label"><b>Enter Image Url/Link</b></label>
@@ -34,12 +28,7 @@
              name="listing[image][url]"  
             value="<%= listing.image.url %>"><br>
         </div>
-
-
-
-
         <div class="row">
-            
         <div class="label col-md-4">
             <label for="price" class="form-label"><b>Price</b></label>
             <input type="text" name="listing[price]" 
@@ -53,12 +42,7 @@
             class="form-control"
             value="<%= listing.country %>"><br>
         </div>
-
         </div>
-
-
-
-
 
         <div class="label">
             <label for="location" class="form-label"><b>Location</b></label>
@@ -66,8 +50,6 @@
             class="form-control"
              value="<%= listing.location %>"><br>
         </div>
-
-
 
  <hr>
         <button type="submit" class="btn btn-dark" style="background-color:  #fe424d;">edit</button>
